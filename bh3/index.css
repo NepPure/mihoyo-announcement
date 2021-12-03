@@ -1,0 +1,44 @@
+body{
+    background-color: #2b94df !important;
+}
+
+.innerann__type-remind:after{
+    display: none !important;
+}
+
+.innerann__tab--unread:after{
+    display: none !important;
+}
+
+.innerann {
+    width: 6.22rem;
+    height: 100% !important;
+    background: none !important;
+    padding: 0 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.innerann__menu{
+    height: 100% !important;
+}
+
+.innerann__article-wrap{
+    height: 100% !important;
+}
+
+.innerann__close{
+    display: none !important;
+}
+
+.innerann__header{
+    display: none !important;
+}
+
+.innerann__menu{
+    display: none !important;
+}
+
+.innerann__body--more:after, .innerann__body--more:before{
+    display: none !important;
+}
