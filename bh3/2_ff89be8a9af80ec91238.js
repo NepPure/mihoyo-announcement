@@ -85,8 +85,9 @@
             data: function () {
                 return {
                     level: i.default.getUrlParam().level || "",
-                    nepType: i.default.getUrlParam().nep_type || 0,
-                    nepIndex: i.default.getUrlParam().nep_index || 0,
+                    nepType: parseInt(i.default.getUrlParam().nep_type) || 0,
+                    nepIndex: parseInt(i.default.getUrlParam().nep_index) || 0,
+                    annId: parseInt(i.default.getUrlParam().ann_id) || 0,
                     isIOS: !1,
                     isAndroid: !1,
                     list: [{
@@ -187,8 +188,32 @@
                 },
                 renderAnn: function (n, t) {
                     console.log("### renderAnn ### list.t: ", n.t);
-                    n.curAnn = this.nepIndex;
+
+                    if (this.annId > 0) {
+                        let find = false;
+                        for (let index = 0; index < n.list.length; index++) {
+                            this.nepType = index;
+                            const element = n.list[index];
+                            for (let indexDetail = 0; indexDetail < element.list.length; indexDetail++) {
+                                this.nepIndex = indexDetail;
+                                const elementDetail = element.list[indexDetail];
+                                if (elementDetail.ann_id === this.annId) {
+                                    find = true;
+                                    break
+                                }
+                            }
+                            if (find) {
+                                break
+                            }
+                        }
+                        if (!find) {
+                            this.nepType = 0;
+                            this.nepIndex = 0;
+                        }
+                    }
+
                     n.curType = this.nepType;
+                    n.curAnn = this.nepIndex;
                     var e = this.$refs.inner;
                     this.date = n.date,
                         this.list = n.list,

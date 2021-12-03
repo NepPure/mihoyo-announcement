@@ -2,6 +2,10 @@ body{
     background-color: #2b94df !important;
 }
 
+#root{
+    height: auto !important;
+}
+
 .innerann__type-remind:after{
     display: none !important;
 }
