@@ -42,3 +42,7 @@ body{
 .innerann__body--more:after, .innerann__body--more:before{
     display: none !important;
 }
+
+.innerann__content{
+    padding-bottom: 10px !important;
+}
