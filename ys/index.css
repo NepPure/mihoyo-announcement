@@ -1,0 +1,33 @@
+body {
+    background-color: #F9F6F2 !important;
+}
+
+.home {
+    background: none !important;
+    height: auto !important;
+}
+
+.home__header-wrap {
+    display: none !important;
+}
+
+.home__menu-wrap {
+    display: none !important;
+}
+
+.home__content {
+    height: auto !important;
+}
+
+.home__main {
+    height: auto !important;
+}
+
+#root {
+    height: auto !important;
+}
+
+.home__article-wrap {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
