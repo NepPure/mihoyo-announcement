@@ -124,14 +124,20 @@
                 }
             },
             computed: {
+                annAllList: function () {
+                    return this.list.length ? this.list : []
+                },
                 annList: function () {
                     return this.list.length ? this.list[this.curType].list : []
                 },
                 annDetail: function () {
-                    var ann_id = 2700
-                    for (var ann of this.annList) {
-                        if (ann.ann_id === ann_id) {
-                            return ann
+                    var t = a.default.parse(window.location.search)
+                    var ann_id = Number(t.ann_id)
+                    for (var typeList of this.annAllList) {
+                        for (var ann of typeList.list) {
+                            if (ann.ann_id === ann_id) {
+                                return ann
+                            }
                         }
                     }
 

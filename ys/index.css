@@ -31,3 +31,8 @@ body {
     -webkit-mask-image: none !important;
     mask-image: none !important;
 }
+
+body,
+html {
+    width: auto !important;
+}
