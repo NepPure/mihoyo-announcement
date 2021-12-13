@@ -364,7 +364,7 @@
         t.environment = "production",
         t.game_biz = "hk4e_cn",
         t.apiBase = "https://api-takumi.neppure.vip/common/",
-        t.cdnBase = "https://hk4e-api-static.mihoyo.com/common/",
+        t.cdnBase = "https://api-takumi.neppure.vip/common/",
         t.webBase = "https://webstatic.mihoyo.com/hk4e/upload/announcement/audio/"
     },
     186: function(e, t, r) {
